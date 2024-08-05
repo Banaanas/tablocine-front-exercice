@@ -7,9 +7,9 @@ const fastify = Fastify({
 })
 
 fastify.register(cors, {
-  origin: '*', // Allow all origins
-  methods: ['GET', 'POST'], // Allow specific methods
-});
+  origin: "*", // Allow all origins
+  methods: ["GET", "POST"] // Allow specific methods
+})
 
 function randomDelay(maxDelay) {
   return new Promise(resolve => {
@@ -31,9 +31,10 @@ fastify.get("/", async (request, reply) => {
   const errorProbability = parseFloat(request.query.errorProbability) || 0.1
 
   await randomDelay(maxDelay)
-  // maybeThrowError(errorProbability)
+  maybeThrowError(errorProbability)
 
   const data = JSON.parse(fs.readFileSync("db.json")).movies
+
   // Pagination
   const limit = parseInt(request.query.limit, 10) || data.length
   const offset = parseInt(request.query.offset, 10) || 0
@@ -42,7 +43,7 @@ fastify.get("/", async (request, reply) => {
   let filteredData = data
   if (request.query.filter) {
     const [key, value] = request.query.filter.split("=")
-    filteredData = filteredData.filter(item => item[key].includes(value))
+    filteredData = filteredData.filter(item => item[key]?.includes(value))
   }
 
   // Sorting

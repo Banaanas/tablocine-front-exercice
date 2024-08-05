@@ -1,0 +1,67 @@
+import React from "react"
+import { ColumnDef, FilterFn } from "@tanstack/react-table"
+import SortingButton from "@/components/table/SortingButton"
+import PosterImage from "@/components/table/PosterImage"
+
+const includesGenres: FilterFn<Movie> = (row, columnId, filterValue) => {
+  const rowGenres = row.getValue<string[]>(columnId)
+  return rowGenres.some(genre => filterValue.includes(genre))
+}
+
+export const columns: ColumnDef<Movie>[] = [
+  {
+    accessorKey: "posterUrl",
+    header: "",
+    cell: ({ row, getValue }) => {
+      const src = getValue<string>()
+      const alt = row.original.title
+
+      return <PosterImage src={src} alt={alt} />
+    }
+  },
+
+  {
+    accessorKey: "rating",
+    header: ({ column }) => <SortingButton column={column}>Rating</SortingButton>,
+    cell: info => info.getValue<number>().toFixed(1)
+  },
+  {
+    accessorKey: "title",
+    header: ({ column }) => <SortingButton column={column}>Title</SortingButton>,
+    cell: info => <span>{info.getValue<string>()}</span>,
+    filterFn: (row, id, filterValue) => {
+      const rowValue = row.getValue<string>(id).toLowerCase()
+      const searchValue = (filterValue as string).toLowerCase()
+      return rowValue.includes(searchValue)
+    }
+  },
+  {
+    accessorKey: "year",
+    header: ({ column }) => <SortingButton column={column}>Year</SortingButton>,
+    cell: info => <span>{info.getValue<string>()}</span> // Correctly retrieves and displays the year
+  },
+
+  {
+    accessorKey: "plot",
+    header: "Plot"
+  },
+  {
+    accessorKey: "genres",
+    header: "Genre",
+    filterFn: includesGenres, // Use the includesGenres filter function
+    cell: info => info.getValue<string[]>().join(", ")
+  }
+]
+
+export interface Movie {
+  id: number
+  title: string
+  rating: number
+  year: string
+  runtime: string
+  genres: Array<string>
+  director: string
+  actors: string
+  plot: string
+  posterUrl: string
+}
