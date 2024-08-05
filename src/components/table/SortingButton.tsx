@@ -6,7 +6,11 @@ import { Movie } from "@/components/table/columns/columns"
 
 const SortingButton = ({ column, children }: { column: Column<Movie>; children: ReactNode }) => {
   return (
-    <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+    <Button
+      variant="ghost"
+      className="items-center justify-center font-bold uppercase"
+      onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+    >
       {children}
       <ArrowUpDown className="ml-2 size-4" />
     </Button>

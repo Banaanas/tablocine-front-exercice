@@ -24,12 +24,14 @@ const DataTableFacetedFilter = <TData, TValue>({
   const facets = column?.getFacetedUniqueValues()
   const selectedValues = new Set(column?.getFilterValue() as string[])
 
-  console.log(selectedValues)
-
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" size="sm" className="h-8 border-dashed">
+        <Button
+          variant="outline"
+          size="sm"
+          className="flex h-8 items-center justify-center border-dashed bg-transparent"
+        >
           <PlusCircleIcon className="mr-2 size-4" />
           {title}
           {selectedValues?.size > 0 && (
@@ -40,14 +42,18 @@ const DataTableFacetedFilter = <TData, TValue>({
               </Badge>
               <div className="hidden space-x-1 lg:flex">
                 {selectedValues.size > 2 ? (
-                  <Badge variant="secondary" className="rounded-sm px-1 font-normal">
+                  <Badge variant="secondary" className="text-traaceTertiary-dark rounded-sm px-1 font-black">
                     {selectedValues.size} selected
                   </Badge>
                 ) : (
                   options
                     .filter(option => selectedValues.has(option.value))
                     .map(option => (
-                      <Badge variant="secondary" key={option.value} className="rounded-sm px-1 font-normal">
+                      <Badge
+                        variant="secondary"
+                        key={option.value}
+                        className="text-traaceTertiary-dark rounded-sm px-1 font-black"
+                      >
                         {option.label}
                       </Badge>
                     ))

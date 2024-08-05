@@ -1,17 +1,17 @@
 import { QueryClientProvider } from "@tanstack/react-query"
 import { reactQueryClient } from "@/lib/react-query"
 import MoviesTable from "@/components/table/MoviesTable"
+import { Clapperboard } from "lucide-react"
 
 const AppLayout = () => {
   return (
     <QueryClientProvider client={reactQueryClient}>
-      <main className="flex min-h-screen flex-col items-center justify-between p-10">
-        <div className="flex flex-col gap-y-10">
-          <h1 className="text-4xl font-bold text-blue-700">Sustainable Traace Movies</h1>
+      <main className="bg-traacePrimary-dark flex flex-grow flex-col items-center justify-start gap-y-10 p-12">
+        <div className="flex w-full items-center gap-x-2 text-white">
+          <Clapperboard size="48" />
+          <span className="bg-red text-center text-4xl font-bold tracking-wide">Traallociné</span>
         </div>
-        <div className="max-w-6xl py-10">
-          <MoviesTable />
-        </div>
+        <MoviesTable />
       </main>
     </QueryClientProvider>
   )

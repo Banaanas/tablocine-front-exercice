@@ -15,9 +15,10 @@ import { useState } from "react"
 import DataTablePagination from "@/components/table/DataTablePagination"
 import { Input } from "@/components/ui/input"
 import { movieGenres } from "@/components/table/data/data"
-import { CrossIcon } from "lucide-react"
+import { XIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import DataTableFacetedFilter from "@/components/table/data-table-faced-filter"
+import { cn } from "@/utils/utils"
 
 export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) => {
   const [sorting, setSorting] = useState<SortingState>([
@@ -52,15 +53,16 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
   const facetFilters = movieFilters
 
   return (
-    <div className="rounded-md border">
-      <div className="flex items-center p-4">
+    <div className="rounded-md border bg-white">
+      <div className="flex items-center bg-gray-200 p-4">
         <Input
-          placeholder="Filter title..."
+          placeholder="Find a movie..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
           onChange={event => table.getColumn("title")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
-        <div className="flex flex-wrap px-2">
+
+        <div className="flex flex-wrap pl-2">
           {facetFilters.map(({ columnId, title, options }) =>
             table.getColumn(columnId) ? (
               <DataTableFacetedFilter
@@ -73,9 +75,8 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
           )}
         </div>
         {isFiltered && (
-          <Button variant="ghost" onClick={() => table.resetColumnFilters()} className="h-8 px-2 lg:px-3">
-            Reset
-            <CrossIcon className="ml-2 size-4" />
+          <Button variant="ghost" onClick={() => table.resetColumnFilters()} className="h-8 px-0">
+            <XIcon className="size-4" />
           </Button>
         )}
       </div>
@@ -83,7 +84,7 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map(headerGroup => (
-            <TableRow key={headerGroup.id}>
+            <TableRow key={headerGroup.id} className="bg-gray-200">
               {headerGroup.headers.map(header => {
                 return (
                   <TableHead key={header.id}>
@@ -96,8 +97,12 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
         </TableHeader>
         <TableBody>
           {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map(row => (
-              <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
+            table.getRowModel().rows.map((row, index) => (
+              <TableRow
+                key={row.id}
+                data-state={row.getIsSelected() && "selected"}
+                className={cn(index % 2 === 0 ? "bg-muted/40" : "bg-white")} // Apply different background color for even rows
+              >
                 {row.getVisibleCells().map(cell => (
                   <TableCell key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
                 ))}
@@ -105,7 +110,7 @@ export const DataTable = <TData, TValue>({ columns, data }: DataTableProps<TData
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+              <TableCell colSpan={columns.length} className="h-24 text-center font-bold italic">
                 No results.
               </TableCell>
             </TableRow>

@@ -37,19 +37,19 @@ export const columns: ColumnDef<Movie>[] = [
   },
   {
     accessorKey: "year",
-    header: ({ column }) => <SortingButton column={column}>Year</SortingButton>,
-    cell: info => <span>{info.getValue<string>()}</span> // Correctly retrieves and displays the year
+    header: ({ column }) => <SortingButton column={column}>Year</SortingButton>
   },
 
   {
     accessorKey: "plot",
-    header: "Plot"
+    header: "Plot",
+    cell: info => <span className="flex text-left">{info.getValue<string>()}</span>
   },
   {
     accessorKey: "genres",
     header: "Genre",
     filterFn: includesGenres, // Use the includesGenres filter function
-    cell: info => info.getValue<string[]>().join(", ")
+    cell: info => <span className="italic">{info.getValue<string[]>().join(", ")}</span>
   }
 ]
 

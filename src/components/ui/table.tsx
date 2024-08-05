@@ -29,11 +29,7 @@ TableFooter.displayName = "TableFooter"
 
 const TableRow = forwardRef<HTMLTableRowElement, HTMLAttributes<HTMLTableRowElement>>(
   ({ className, ...props }, ref) => (
-    <tr
-      ref={ref}
-      className={cn("border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)}
-      {...props}
-    />
+    <tr ref={ref} className={cn("border-b transition-colors data-[state=selected]:bg-muted", className)} {...props} />
   )
 )
 TableRow.displayName = "TableRow"
@@ -44,7 +40,7 @@ const TableHead = forwardRef<HTMLTableCellElement, ThHTMLAttributes<HTMLTableCel
       <th
         ref={ref}
         className={cn(
-          "bg- h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0",
+          "h-12 px-4 text-center align-middle font-bold uppercase [&:has([role=checkbox])]:pr-0",
           className
         )}
         {...props}
@@ -56,7 +52,7 @@ TableHead.displayName = "TableHead"
 
 const TableCell = forwardRef<HTMLTableCellElement, TdHTMLAttributes<HTMLTableCellElement>>(
   ({ className, ...props }, ref) => (
-    <td ref={ref} className={cn("p-4 align-middle [&:has([role=checkbox])]:pr-0", className)} {...props} />
+    <td ref={ref} className={cn("p-4 text-center align-middle [&:has([role=checkbox])]:pr-0", className)} {...props} />
   )
 )
 TableCell.displayName = "TableCell"

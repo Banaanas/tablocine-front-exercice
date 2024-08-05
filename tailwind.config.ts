@@ -46,6 +46,21 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
+        },
+        traacePrimary: {
+          DEFAULT: "var(--traace-primary-color)",
+          light: "#5f7691", // Optional lighter variant
+          dark: "#2e405d" // Optional darker variant
+        },
+        traaceSecondary: {
+          DEFAULT: "var(--traace-secondary-color)",
+          light: "#005f52", // Optional lighter variant
+          dark: "#00231f" // Optional darker variant
+        },
+        traaceTertiary: {
+          DEFAULT: "var(--traace-tertiary-color)",
+          light: "#33e3af", // Optional lighter variant
+          dark: "#009d74" // Optional darker variant
         }
       },
       borderRadius: {
