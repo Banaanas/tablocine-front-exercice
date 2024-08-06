@@ -1,14 +1,3 @@
-
-
-<br/>
-<!-- PROJECT LOGO -->
-<br/>
-<p align="center">
-      <a href="https://traace-table.vercel.app/">
-        <img src="./public/traalocine-logo.png" alt="Project's Logo" width="300">
-    </a>
-</p>
-
 <h1 align="center">🎬Traalocine 🎬</h1>
 <h3 align="center">React - TypeScript</h3>
 
@@ -37,8 +26,8 @@
 Front-End exercise .
 
 <p align="center">
-  <a href="https://cyrilo.dev/">
-    <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="320" height="240">
+  <a href="https://traace-table.vercel.app">
+    <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="640">
   </a>
 </p>
 
@@ -54,7 +43,7 @@ Front-End exercise .
 
 
 <p align="center">
-  <a href="https://cyrilo.dev/">
+  <a href="https://traace-table.vercel.app">
     <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="210" height="400">
   </a>
 </p>
