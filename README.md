@@ -1,52 +1,107 @@
-# Traace Front Exercise
 
-## Install and run
 
-```bash
-npm install
-npm start
+<br/>
+<!-- PROJECT LOGO -->
+<br/>
+<p align="center">
+      <a href="https://traace-table.vercel.app/">
+        <img src="public/traalocine-logo.png" alt="Project's Logo" width="300">
+    </a>
+</p>
+
+<h1 align="center">🎬Traalocine 🎬</h1>
+<h3 align="center">React - TypeScript</h3>
+
+<p align="center">
+    Sustainable alternative to IMDB.<br/><br/>
+    <a href="https://traace-table.vercel.app/">:computer: Live Demo :eyes:</a><br/><br/>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+    - [Principal Features](#principal-features)
+    - [Built With](#built-with)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+- [License](#license)
+- [Contact](#contact)
+
+<!-- ABOUT THE PROJECT -->
+
+## About the Project
+
+Front-End exercise .
+
+<p align="center">
+  <a href="https://cyrilo.dev/">
+    <img src="public/README/screenshot-1.jpg" alt="Screenshot of Traallocine" width="320" height="240">
+  </a>
+</p>
+
+<!-- PRINCIPAL FEATURES -->
+
+#### Principal Features
+
+- **Movie Search**: Allows users to search for movies by title.
+- **Sorting**: Users can sort movies by title, rating, and year of release.
+- **Filtering**: Provides filtering options for movies based on genre.
+- **Accessibility**: Designed with accessibility best practices to ensure the application is usable by everyone.
+- **Responsive Design**: Fully responsive layout that adapts to different screen sizes and devices.
+
+
+<p align="center">
+  <a href="https://cyrilo.dev/">
+    <img src="public/README/screenshot-2.png" alt="Screenshot of Traallocine" width="210" height="400">
+  </a>
+</p>
+
+<!-- BUILT WITH -->
+
+#### Built With
+
+- **[React](https://reactjs.org/)**: A JavaScript library for building user interfaces.
+- **[TypeScript](https://www.typescriptlang.org/)**: A typed superset of JavaScript.
+- **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework.
+- **[Shadcn UI](https://ui.shadcn.com/)**: A component library built with React and Tailwind CSS.
+- **[React Query](https://tanstack.com/query/v4)**: A library for fetching and caching server data in React.
+- **[React Table](https://tanstack.com/table/v8)**: A library for building tables and data grids in React.
+
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+#### Prerequisites
+
+- Node.js
+- NPM - Node Package Manager
+
+#### Installation
+
+1 - Clone the Project's repository
+
+```sh
+git clone git@github.com:Banaanas/traace-table.git
 ```
 
-## API url
-```bash
-http://localhost:5173/api (/api)
+2 - Install NPM Packages / Dependencies
+
+```sh
+npm clone install
 ```
 
-## Specs
+3 - Development Server
 
-The goal of the app that you’re building is to list movies ranked by rating and be able to filter them by genres using **React**.
+```sh
+npm run start
+```
 
-At this moment, the app is basically a blank page with a title. Feel free to delete the title if you want.
+4 - Production build
 
-You’re in charge of the front end and the server you're using is in the repo in the server.js file.
-
-What we expect you to build, is an interface for displaying the **Best movies ranked by scores**
-
-The table should have the following columns:
-- Poster
-- Rating
-- Title
-- Year of release
-- Duration (with the format hh:mm)
-- Plot
-- Genre *Clickable to filter the list*
-
-Feel free to group multiple information in one column if you think it’s relevant!
-An advanced requirement is to make the table paginated (the server handles pagination, read the code to understand how it works).
-
-## Side notes
-
-- You **must** use **react** and **functional components**. The interface **must** be in english. For the rest, we use Typescript and Antd as a component library, but feel free to use any library you’re comfortable with. Just make sure the code is easy to understand for us :)
-- It's OK if you don't deliver everything that is asked for. Deliver a working interface and we can discuss how to improve it during the interview.
-- It’s important that you produce clear, reusable, future-proof code.
-- Produce a good-looking interface, but don’t focus on fancy CSS the quality of the JS is more important.
-- Don’t hesitate to comment your code if you feel it will make it clearer
-- Take the time you need, but more importantly take the time you have available to do this exercise. Set yourself a time limit and try to stick to it. It's fine if you don't manage to do everything. Just tell us in your email how long it took you and we will take this into account in our rating.
-
-## Deliverable
-
-You’re expected to deliver a Github Repo with clear install and run instructions as well as a screenshot in the readme file.
-
-## Links
-- And Design https://ant.design/ (https://ant.design/components/overview/)
-- React https://reactjs.org/
+```sh
+npm run build
+```
