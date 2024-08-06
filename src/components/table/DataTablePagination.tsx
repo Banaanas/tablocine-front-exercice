@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 const DataTablePagination = <TData,>({ table }: DataTablePaginationProps<TData>) => {
   return (
-    <div className="flex items-center justify-between bg-gray-200 px-4 py-2">
+    <div className="flex flex-col-reverse items-center justify-between gap-y-4 bg-gray-200 px-4 py-2 sm:flex-row">
       <div className="flex items-center space-x-2">
         <p className="text-sm font-medium">Rows per page</p>
         <Select

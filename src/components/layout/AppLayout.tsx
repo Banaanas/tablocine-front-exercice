@@ -6,10 +6,10 @@ import { Clapperboard } from "lucide-react"
 const AppLayout = () => {
   return (
     <QueryClientProvider client={reactQueryClient}>
-      <main className="bg-traacePrimary-dark flex flex-grow flex-col items-center justify-start gap-y-10 p-12">
+      <main className="flex flex-grow flex-col items-center justify-start gap-y-4 bg-traacePrimary-dark p-4 md:gap-y-10 md:p-12">
         <div className="flex w-full items-center gap-x-2 text-white">
           <Clapperboard size="48" />
-          <span className="bg-red text-center text-4xl font-bold tracking-wide">Traallociné</span>
+          <span className="text-center text-2xl font-bold tracking-wide md:text-4xl">Traallociné</span>
         </div>
         <MoviesTable />
       </main>

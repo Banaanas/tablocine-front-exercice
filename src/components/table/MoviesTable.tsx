@@ -13,9 +13,9 @@ const MoviesTable = () => {
 
   if (isLoading)
     return (
-      <div className="flex min-h-64 w-full min-w-[900px] max-w-6xl flex-col items-center justify-between gap-y-10 rounded-xl p-10">
-        <LoadingSpinner className="h-24" />
-        <div className="text-traaceTertiary-dark flex flex-col items-center justify-center text-2xl italic">
+      <div className="max-w-6x flex max-h-[500px] grow flex-col items-center justify-center gap-y-10 overflow-hidden rounded-sm bg-gray-200 p-10 md:max-h-none">
+        <LoadingSpinner className="h-12 md:h-24" />
+        <div className="flex flex-col items-center justify-center text-center text-2xl font-bold italic text-traacePrimary-dark">
           <span>Data for your Movies Table is being loaded</span>
           <span>Thanks for you patience.</span>
         </div>
@@ -27,7 +27,7 @@ const MoviesTable = () => {
   }
 
   return (
-    <div className="w-full min-w-[900px] max-w-6xl">
+    <div className="w-full max-w-6xl">
       <DataTable columns={columns} data={data.movies} />
     </div>
   )
