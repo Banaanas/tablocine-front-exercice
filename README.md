@@ -5,7 +5,7 @@
 <br/>
 <p align="center">
       <a href="https://traace-table.vercel.app/">
-        <img src="public/traalocine-logo.png" alt="Project's Logo" width="300">
+        <img src="./public/traalocine-logo.png" alt="Project's Logo" width="300">
     </a>
 </p>
 
@@ -38,7 +38,7 @@ Front-End exercise .
 
 <p align="center">
   <a href="https://cyrilo.dev/">
-    <img src="public/README/screenshot-1.jpg" alt="Screenshot of Traallocine" width="320" height="240">
+    <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="320" height="240">
   </a>
 </p>
 
@@ -55,7 +55,7 @@ Front-End exercise .
 
 <p align="center">
   <a href="https://cyrilo.dev/">
-    <img src="public/README/screenshot-2.png" alt="Screenshot of Traallocine" width="210" height="400">
+    <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="210" height="400">
   </a>
 </p>
 
