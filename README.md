@@ -95,6 +95,6 @@ npm run build
 
 <p align="center">
   <a href="https://traace-table.vercel.app">
-    <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="320">
+    <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="640">
   </a>
 </p>
