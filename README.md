@@ -25,12 +25,6 @@
 
 Front-End exercise .
 
-<p align="center">
-  <a href="https://traace-table.vercel.app">
-    <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="640">
-  </a>
-</p>
-
 <!-- PRINCIPAL FEATURES -->
 
 #### Principal Features
@@ -41,12 +35,6 @@ Front-End exercise .
 - **Accessibility**: Designed with accessibility best practices to ensure the application is usable by everyone.
 - **Responsive Design**: Fully responsive layout that adapts to different screen sizes and devices.
 
-
-<p align="center">
-  <a href="https://traace-table.vercel.app">
-    <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="210" height="400">
-  </a>
-</p>
 
 <!-- BUILT WITH -->
 
@@ -94,3 +82,19 @@ npm run start
 ```sh
 npm run build
 ```
+
+## Screenshots
+
+
+<p align="center">
+  <a href="https://traace-table.vercel.app">
+    <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="640">
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="https://traace-table.vercel.app">
+    <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="320">
+  </a>
+</p>
