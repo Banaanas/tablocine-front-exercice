@@ -10,13 +10,13 @@ import {
   useReactTable,
   VisibilityState
 } from "@tanstack/react-table"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/Table"
 import { useState } from "react"
 import DataTablePagination from "@/components/table/DataTablePagination"
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/Input"
 import { movieGenres } from "@/components/table/data/data"
 import { XIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import DataTableFacetedFilter from "@/components/table/data-table-faced-filter"
 import { cn } from "@/utils/utils"
 

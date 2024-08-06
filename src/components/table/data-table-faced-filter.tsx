@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import {
   Command,
   CommandEmpty,
@@ -7,14 +7,14 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator
-} from "@/components/ui/command"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/Command"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/Popover"
+import { Separator } from "@/components/ui/Separator"
 import { Column } from "@tanstack/react-table"
 import { CheckIcon, PlusCircleIcon } from "lucide-react"
 import * as React from "react"
 import { cn } from "@/utils/utils"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/Badge"
 
 const DataTableFacetedFilter = <TData, TValue>({
   column,

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 import { Column } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react"
 import { ReactNode } from "react"
