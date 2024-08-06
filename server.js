@@ -8,10 +8,12 @@ const fastify = Fastify({
 });
 
 // Determine the allowed origin based on the environment
-const allowedOrigins =
-  process.env.NODE_ENV === "production"
-    ? ["https://traace-table.vercel.app"] // Production origin
-    : ["http://localhost:3000"]; // Local development origin
+const isProduction =
+  process.env.NODE_ENV === "production" || process.env.VERCEL_ENV === "production";
+
+const allowedOrigins = isProduction
+  ? ["https://traace-table.vercel.app"] // Production origin
+  : ["http://localhost:3000"]; // Local development origin
 
 // Register CORS plugin
 fastify.register(cors, {
