@@ -1,12 +1,8 @@
 import React from "react"
-import { ColumnDef, FilterFn } from "@tanstack/react-table"
+import { ColumnDef } from "@tanstack/react-table"
 import SortingButton from "@/components/table/SortingButton"
 import PosterImage from "@/components/table/PosterImage"
-
-const includesGenres: FilterFn<Movie> = (row, columnId, filterValue) => {
-  const rowGenres = row.getValue<string[]>(columnId)
-  return rowGenres.some(genre => filterValue.includes(genre))
-}
+import { includesAllGenres } from "@/components/table/columns/column-filters-functions"
 
 export const columns: ColumnDef<Movie>[] = [
   {
@@ -48,7 +44,7 @@ export const columns: ColumnDef<Movie>[] = [
   {
     accessorKey: "genres",
     header: "Genre",
-    filterFn: includesGenres, // Use the includesGenres filter function
+    filterFn: includesAllGenres, // Use the includesGenres filter function
     cell: info => <span className="italic">{info.getValue<string[]>().join(", ")}</span>
   }
 ]
