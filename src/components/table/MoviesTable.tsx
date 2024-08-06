@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
 import LoadingSpinner from "@/components/ui/LoadingSpinner"
-import { Alert } from "antd"
 import { DataTable } from "@/components/table/data-table/data-table"
 import { columns } from "@/components/table/columns/columns"
 import axios from "axios"
@@ -22,8 +21,15 @@ const MoviesTable = () => {
       </div>
     )
 
-  if (isError) {
-    return <Alert message="Error" description={error.message} type="error" />
+  if (error) {
+    return (
+      <div className="max-w-6x flex max-h-[500px] grow flex-col items-center justify-center gap-y-10 overflow-hidden rounded-sm bg-gray-200 p-10 md:max-h-none">
+        <div className="flex flex-col items-center justify-center text-center text-2xl font-bold italic text-red-500">
+          <span>We're sorry, but there was a problem loading the data.</span>
+          <span>Please try again later.</span>
+        </div>
+      </div>
+    )
   }
 
   return (
