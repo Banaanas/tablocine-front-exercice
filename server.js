@@ -8,7 +8,7 @@ const fastify = Fastify({
 })
 
 // Determine the allowed origin based on the environment
-const isProduction = process.env.NODE_ENV === "production" || process.env.VERCEL_ENV === "production"
+const isProduction = process.env.VERCEL_ENV === "production"
 
 const allowedOrigins = isProduction
   ? ["https://traace-table.vercel.app"] // Production origin
