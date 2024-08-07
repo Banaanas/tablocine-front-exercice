@@ -10,6 +10,9 @@ const fastify = Fastify({
 // Determine the allowed origin based on the environment
 const isProduction = process.env.VERCEL_ENV === "production"
 
+console.log("VERCEL ENV :",process.env.VERCEL_ENV)
+
+
 const allowedOrigins = isProduction
   ? ["https://traace-table.vercel.app"] // Production origin
   : ["http://localhost:3000"] // Local development origin
