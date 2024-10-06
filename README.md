@@ -62,7 +62,7 @@ Front-End exercise .
 1 - Clone the Project's repository
 
 ```sh
-git clone git@github.com:Banaanas/tablocine-table.git
+git clone git@github.com:Banaanas/tablocine-front-exercice.git
 ```
 
 2 - Install NPM Packages / Dependencies
