@@ -47,18 +47,18 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
         },
-        traacePrimary: {
-          DEFAULT: "var(--traace-primary-color)",
+        tablocinePrimary: {
+          DEFAULT: "var(--tablocine-primary-color)",
           light: "#5f7691", // Optional lighter variant
           dark: "#2e405d" // Optional darker variant
         },
-        traaceSecondary: {
-          DEFAULT: "var(--traace-secondary-color)",
+        tablocineSecondary: {
+          DEFAULT: "var(--tablocine-secondary-color)",
           light: "#005f52", // Optional lighter variant
           dark: "#00231f" // Optional darker variant
         },
-        traaceTertiary: {
-          DEFAULT: "var(--traace-tertiary-color)",
+        tablocineTertiary: {
+          DEFAULT: "var(--tablocine-tertiary-color)",
           light: "#33e3af", // Optional lighter variant
           dark: "#009d74" // Optional darker variant
         }

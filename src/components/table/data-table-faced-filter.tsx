@@ -42,7 +42,7 @@ const DataTableFacetedFilter = <TData, TValue>({
               </Badge>
               <div className="hidden space-x-1 lg:flex">
                 {selectedValues.size > 2 ? (
-                  <Badge variant="secondary" className="text-traaceTertiary-dark rounded-sm px-1 font-black">
+                  <Badge variant="secondary" className="text-tablocineTertiary-dark rounded-sm px-1 font-black">
                     {selectedValues.size} selected
                   </Badge>
                 ) : (
@@ -52,7 +52,7 @@ const DataTableFacetedFilter = <TData, TValue>({
                       <Badge
                         variant="secondary"
                         key={option.value}
-                        className="text-traaceTertiary-dark rounded-sm px-1 font-black"
+                        className="text-tablocineTertiary-dark rounded-sm px-1 font-black"
                       >
                         {option.label}
                       </Badge>

@@ -1,9 +1,9 @@
-<h1 align="center">🎬Traalocine 🎬</h1>
+<h1 align="center">🎬Tablociné 🎬</h1>
 <h3 align="center">React - TypeScript</h3>
 
 <p align="center">
     Sustainable alternative to IMDB.<br/><br/>
-    <a href="https://traace-table.vercel.app/">:computer: Live Demo :eyes:</a><br/><br/>
+    <a href="https://tablocine-table.vercel.app/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -62,7 +62,7 @@ Front-End exercise .
 1 - Clone the Project's repository
 
 ```sh
-git clone git@github.com:Banaanas/traace-table.git
+git clone git@github.com:Banaanas/tablocine-table.git
 ```
 
 2 - Install NPM Packages / Dependencies
@@ -87,14 +87,14 @@ npm run build
 
 
 <p align="center">
-  <a href="https://traace-table.vercel.app">
+  <a href="https://tablocine-table.vercel.app">
     <img src="./public/README/screenshot-1.jpeg" alt="Screenshot of Traallocine" width="640">
   </a>
 </p>
 
 
 <p align="center">
-  <a href="https://traace-table.vercel.app">
+  <a href="https://tablocine-table.vercel.app">
     <img src="./public/README/screenshot-2.jpeg" alt="Screenshot of Traallocine" width="640">
   </a>
 </p>
